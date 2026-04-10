@@ -1,0 +1,31 @@
+2026-01-30 01:43:07,552 | INFO     | ======================================================================
+2026-01-30 01:43:07,552 | INFO     |   OPEN TARGETS DATA INGESTION
+2026-01-30 01:43:07,553 | INFO     | ======================================================================
+2026-01-30 01:43:07,553 | INFO     |   Collection: OpenTargets_data
+2026-01-30 01:43:07,553 | INFO     |   Include Drugs: True
+2026-01-30 01:43:07,553 | INFO     |   Include Associations: True
+2026-01-30 01:43:07,553 | INFO     |   Batch Size: 100
+2026-01-30 01:43:07,553 | INFO     | ======================================================================
+2026-01-30 01:43:08,395 | INFO     | HTTP Request: GET https://vector.f420.ai "HTTP/1.1 401 Unauthorized"
+2026-01-30 01:43:08,461 | INFO     | Loading PubMedBERT embedder...
+2026-01-30 01:43:28,383 | INFO     | Use pytorch device_name: cuda:0
+2026-01-30 01:43:28,383 | INFO     | Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-01-30 01:43:33,477 | INFO     | Embedder loaded!
+2026-01-30 01:43:33,957 | INFO     | HTTP Request: DELETE https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:43:33,961 | INFO     | Deleted existing collection: OpenTargets_data
+2026-01-30 01:43:34,089 | INFO     | HTTP Request: GET https://vector.f420.ai/collections "HTTP/1.1 200 OK"
+2026-01-30 01:43:34,092 | INFO     | Creating collection: OpenTargets_data
+2026-01-30 01:43:34,423 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:43:34,423 | INFO     | Collection 'OpenTargets_data' created
+2026-01-30 01:43:34,424 | INFO     | 
+Fetching data from Open Targets API...
+2026-01-30 01:43:34,424 | INFO     | Fetching targets...
+2026-01-30 01:43:45,707 | INFO     | Fetched 500 targets
+2026-01-30 01:43:45,708 | INFO     | Fetching diseases...
+2026-01-30 01:43:45,849 | INFO     | Fetched 6 diseases
+2026-01-30 01:43:45,849 | INFO     | Fetching drugs...
+2026-01-30 01:43:45,971 | WARNING  | Attempt 1 failed: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 01:43:47,092 | WARNING  | Attempt 2 failed: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 01:43:49,226 | WARNING  | Attempt 3 failed: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 01:43:49,227 | INFO     | Fetched 0 drugs
+2026-01-30 01:43:49,227 | INFO     | Fetching disease-target associations...

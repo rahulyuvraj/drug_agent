@@ -1,0 +1,79 @@
+2026-01-30 01:47:08,763 | INFO     | ======================================================================
+2026-01-30 01:47:08,763 | INFO     |   OPEN TARGETS DATA INGESTION
+2026-01-30 01:47:08,763 | INFO     | ======================================================================
+2026-01-30 01:47:08,764 | INFO     |   Collection: OpenTargets_data
+2026-01-30 01:47:08,764 | INFO     |   Include Drugs: True
+2026-01-30 01:47:08,764 | INFO     |   Include Associations: True
+2026-01-30 01:47:08,765 | INFO     |   Batch Size: 100
+2026-01-30 01:47:08,765 | INFO     | ======================================================================
+2026-01-30 01:47:09,452 | INFO     | HTTP Request: GET https://vector.f420.ai "HTTP/1.1 401 Unauthorized"
+2026-01-30 01:47:09,513 | INFO     | Loading PubMedBERT embedder...
+2026-01-30 01:47:21,277 | INFO     | Use pytorch device_name: cuda:0
+2026-01-30 01:47:21,277 | INFO     | Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-01-30 01:47:24,044 | INFO     | Embedder loaded!
+2026-01-30 01:47:24,448 | INFO     | HTTP Request: DELETE https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:47:24,451 | INFO     | Deleted existing collection: OpenTargets_data
+2026-01-30 01:47:24,582 | INFO     | HTTP Request: GET https://vector.f420.ai/collections "HTTP/1.1 200 OK"
+2026-01-30 01:47:24,584 | INFO     | Creating collection: OpenTargets_data
+2026-01-30 01:47:24,877 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:47:24,878 | INFO     | Collection 'OpenTargets_data' created
+2026-01-30 01:47:24,878 | INFO     | 
+Fetching data from Open Targets API...
+2026-01-30 01:47:24,878 | INFO     | Fetching targets...
+2026-01-30 01:47:25,228 | INFO     | Fetched 500 targets
+2026-01-30 01:47:25,228 | INFO     | Fetching diseases...
+2026-01-30 01:47:25,359 | INFO     | Fetched 7 diseases
+2026-01-30 01:47:25,359 | INFO     | Fetching drugs...
+2026-01-30 01:47:27,661 | INFO     | Fetched 587 drugs
+2026-01-30 01:47:27,662 | INFO     | Fetching disease-target associations...
+2026-01-30 01:47:28,440 | WARNING  | Disease not found: EFO_0000270
+2026-01-30 01:47:28,697 | WARNING  | Disease not found: EFO_0001360
+2026-01-30 01:47:30,362 | WARNING  | Disease not found: EFO_0003885
+2026-01-30 01:47:30,493 | WARNING  | Disease not found: EFO_0002508
+2026-01-30 01:47:31,036 | WARNING  | Disease not found: EFO_0000249
+2026-01-30 01:47:31,180 | WARNING  | Disease not found: EFO_0003761
+2026-01-30 01:47:31,642 | INFO     | Fetched 700 associations
+2026-01-30 01:47:31,642 | INFO     | 
+Fetched 1,794 documents from Open Targets
+2026-01-30 01:47:31,643 | INFO     | Document breakdown:
+2026-01-30 01:47:31,643 | INFO     |   - association: 700
+2026-01-30 01:47:31,643 | INFO     |   - disease: 7
+2026-01-30 01:47:31,643 | INFO     |   - drug: 587
+2026-01-30 01:47:31,643 | INFO     |   - target: 500
+2026-01-30 01:47:31,644 | INFO     | 
+Starting embedding and upload...
+2026-01-30 01:47:34,189 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:34,945 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:35,664 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:36,430 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:37,122 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:37,123 | INFO     | Progress: 500/1,794 (27.9%) | Rate: 91.3/s | Elapsed: 0:00:05
+2026-01-30 01:47:37,837 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:38,506 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:39,187 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:39,872 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:40,572 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:40,573 | INFO     | Progress: 1,000/1,794 (55.7%) | Rate: 112.0/s | Elapsed: 0:00:08
+2026-01-30 01:47:41,180 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:41,749 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:42,330 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:42,936 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:43,528 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:43,528 | INFO     | Progress: 1,500/1,794 (83.6%) | Rate: 126.2/s | Elapsed: 0:00:11
+2026-01-30 01:47:44,099 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:44,657 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:45,208 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:47:45,209 | INFO     | Progress: 1,794/1,794 (100.0%) | Rate: 132.2/s | Elapsed: 0:00:13
+2026-01-30 01:47:45,210 | INFO     | 
+======================================================================
+2026-01-30 01:47:45,211 | INFO     |   INGESTION COMPLETE
+2026-01-30 01:47:45,211 | INFO     | ======================================================================
+2026-01-30 01:47:45,211 | INFO     |   Total Processed: 1,794
+2026-01-30 01:47:45,211 | INFO     |   Successful: 1,794
+2026-01-30 01:47:45,212 | INFO     |   Failed: 0
+2026-01-30 01:47:45,212 | INFO     |   Duration: 0:00:13
+2026-01-30 01:47:45,212 | INFO     |   Rate: 132.2 docs/sec
+2026-01-30 01:47:45,300 | INFO     | HTTP Request: GET https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:47:45,303 | INFO     | 
+  Collection 'OpenTargets_data' now has 1,794 points
+2026-01-30 01:47:45,303 | INFO     | ======================================================================

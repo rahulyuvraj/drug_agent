@@ -1,0 +1,83 @@
+# Drug Discovery Agent Configuration
+# ==================================
+
+# Qdrant Cloud Configuration
+qdrant:
+  # Qdrant Cloud URL (set via QDRANT_URL environment variable)
+  url: null  # e.g., "https://your-cluster-id.us-east4-0.gcp.cloud.qdrant.io"
+  port: 443  # Use 443 for HTTPS behind nginx
+  # API Key (set via QDRANT_API_KEY environment variable - REQUIRED for cloud)
+  api_key: null
+  # Collection name (set via QDRANT_COLLECTION env var)
+  collection_name: null  # Will use QDRANT_COLLECTION env var
+  timeout_seconds: 120
+  # Use HTTPS for cloud
+  use_https: true
+  # Prefer gRPC for better performance (set to false for Basic Auth)
+  prefer_grpc: false
+
+# Embedding Configuration - HuggingFace PubMed-BERT
+embedding:
+  # HuggingFace model identifier
+  model_name: "NeuML/pubmedbert-base-embeddings"
+  # Alternative models:
+  # - "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext"
+  # - "pritamdeka/S-PubMedBert-MS-MARCO"
+  device: "auto"  # auto, cuda, cpu, mps
+  batch_size: 32
+  max_sequence_length: 512
+  cache_enabled: true
+  cache_directory: "./embedding_cache"
+  # HuggingFace token (optional, for private models)
+  hf_token: null  # Set via HF_TOKEN environment variable
+
+# Data Ingestion Configuration
+ingestion:
+  json_directory: "/mnt/c/Users/7wraa/Downloads/Ayass-v5.26/GeneALaCart-AllGenes"
+  batch_size: 1000
+  skip_empty_files: true
+  checkpoint_enabled: true
+  checkpoint_directory: "./checkpoints"
+  # Maximum workers for parallel processing
+  max_workers: 4
+
+# Retrieval Configuration
+retrieval:
+  default_top_k: 50
+  final_top_k: 20
+  min_relevance_score: 0.3
+  rrf_k: 60
+  # Enable query expansion from knowledge base
+  dynamic_expansion: true
+
+# Ranking Configuration
+ranking:
+  weights:
+    relevance: 0.30
+    gene_match: 0.35
+    evidence: 0.20
+    approval_status: 0.15
+
+# Output Configuration
+output:
+  max_recommendations: 30
+  include_evidence_details: true
+
+# Agent Communication Configuration
+agent:
+  # Unique agent identifier
+  agent_id: "drug_discovery_agent"
+  # Agent version
+  version: "1.0.0"
+  # Enable inter-agent messaging
+  enable_messaging: true
+  # Message queue type (memory, redis, rabbitmq)
+  message_queue: "memory"
+  # Response timeout in seconds
+  response_timeout: 120
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null

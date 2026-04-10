@@ -1,0 +1,23 @@
+# Drug Agent — standalone requirements
+# Core
+streamlit>=1.30.0
+pandas>=2.0.0
+numpy>=1.24.0
+python-dotenv>=1.0.0
+
+# Qdrant vector search
+qdrant-client>=1.7.0
+httpx>=0.24.0
+
+# Embedding model
+sentence-transformers>=2.2.0
+
+# AWS Bedrock LLM
+boto3>=1.28.0
+
+# Resilience
+tenacity>=8.2.0
+pybreaker>=1.0.0
+
+# File parsing (for uploaded CSV/Excel)
+openpyxl>=3.1.0

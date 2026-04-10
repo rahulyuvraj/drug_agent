@@ -1,0 +1,259 @@
+2026-02-13 10:44:37,567 | INFO     | HTTP Request: GET https://vector.f420.ai "HTTP/1.1 401 Unauthorized"
+/home/wrahul/projects/agenticaib/agentic_ai_wf/drug_discovery_agent/opentargets/ot_base.py:28: UserWarning: Failed to obtain server version. Unable to check client-server compatibility. Set check_compatibility=False to skip version check.
+  client = QdrantClient(url=QDRANT_URL, port=443, timeout=120, prefer_grpc=False, https=True)
+2026-02-13 10:44:41,516 | INFO     | Loading PubMedBERT on cuda
+2026-02-13 10:44:41,518 | INFO     | Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-02-13 10:44:47,335 | INFO     | HTTP Request: GET https://vector.f420.ai/collections "HTTP/1.1 200 OK"
+2026-02-13 10:44:47,444 | INFO     | HTTP Request: DELETE https://vector.f420.ai/collections/OpenTargets_pharmacogenomics "HTTP/1.1 200 OK"
+2026-02-13 10:44:47,666 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics "HTTP/1.1 200 OK"
+2026-02-13 10:44:47,667 | INFO     | Created collection: OpenTargets_pharmacogenomics
+2026-02-13 10:44:47,760 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points/count "HTTP/1.1 200 OK"
+2026-02-13 10:44:47,762 | INFO     | Collection 'OpenTargets_pharmacogenomics': 0 points
+2026-02-13 10:44:47,957 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:48,182 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:48,380 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:48,488 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:48,596 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:48,709 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:48,823 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:48,939 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:49,050 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:49,158 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:49,275 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:49,393 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:49,505 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/scroll "HTTP/1.1 200 OK"
+2026-02-13 10:44:49,511 | INFO     | Loaded 3,230 drug IDs from OpenTargets_drugs_enriched
+2026-02-13 10:44:49,513 | INFO     | Drug-side PGx: 3,230 remaining (0 done)
+2026-02-13 10:44:49,513 | INFO     | ==================================================
+2026-02-13 10:44:49,514 | INFO     | PHASE 1: Drug-centric pharmacogenomics
+2026-02-13 10:44:49,514 | INFO     | ==================================================
+2026-02-13 10:45:03,299 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:45:03,849 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:45:05,177 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:45:28,028 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:45:38,291 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:45:39,233 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:45:39,785 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:45:49,079 | INFO     | Drugs: 100/3,230 | PGx: 761 | Dups skipped: 660 | 1.0min
+2026-02-13 10:45:51,070 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:46:10,322 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:46:40,884 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:46:44,650 | INFO     | Drugs: 200/3,230 | PGx: 1,026 | Dups skipped: 820 | 1.9min
+2026-02-13 10:46:49,818 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:46:50,418 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:00,973 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:01,515 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:37,215 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:37,740 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:38,260 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:38,753 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:39,289 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:39,817 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:47:43,151 | INFO     | Drugs: 300/3,230 | PGx: 2,046 | Dups skipped: 1,076 | 2.9min
+2026-02-13 10:47:57,442 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:48:26,348 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:48:28,733 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:48:36,859 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:48:40,183 | INFO     | Drugs: 400/3,230 | PGx: 2,492 | Dups skipped: 1,491 | 3.8min
+2026-02-13 10:48:55,003 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:49:15,068 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:49:31,221 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:49:31,737 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:49:35,587 | INFO     | Drugs: 500/3,230 | PGx: 2,890 | Dups skipped: 1,615 | 4.8min
+2026-02-13 10:49:41,372 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:50:15,065 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:50:15,614 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:50:30,178 | INFO     | Drugs: 600/3,230 | PGx: 3,142 | Dups skipped: 2,013 | 5.7min
+2026-02-13 10:50:38,248 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:50:59,387 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:51:02,075 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:51:24,927 | INFO     | Drugs: 700/3,230 | PGx: 3,449 | Dups skipped: 2,073 | 6.6min
+2026-02-13 10:51:49,006 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:51:51,066 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:51:52,478 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:51:53,142 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:52:07,864 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:52:11,989 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:52:24,294 | INFO     | Drugs: 800/3,230 | PGx: 4,022 | Dups skipped: 2,748 | 7.6min
+2026-02-13 10:52:53,701 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:53:18,759 | INFO     | Drugs: 900/3,230 | PGx: 4,111 | Dups skipped: 2,797 | 8.5min
+2026-02-13 10:53:49,552 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:53:56,598 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:54:12,399 | INFO     | Drugs: 1,000/3,230 | PGx: 4,378 | Dups skipped: 2,959 | 9.4min
+2026-02-13 10:54:34,042 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:54:56,541 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:55:05,878 | INFO     | Drugs: 1,100/3,230 | PGx: 4,519 | Dups skipped: 2,975 | 10.3min
+2026-02-13 10:55:19,054 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:55:39,432 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:55:51,685 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:55:52,220 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:55:55,637 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:02,210 | INFO     | Drugs: 1,200/3,230 | PGx: 5,039 | Dups skipped: 3,201 | 11.2min
+2026-02-13 10:56:10,036 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:11,139 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:25,659 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:31,605 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:32,276 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:44,014 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:44,557 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:56:47,750 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:57:20,035 | WARNING  | Attempt 1 failed: HTTPSConnectionPool(host='api.platform.opentargets.org', port=443): Read timed out. (read timeout=30)
+2026-02-13 10:57:51,900 | WARNING  | Attempt 1 failed: HTTPSConnectionPool(host='api.platform.opentargets.org', port=443): Read timed out. (read timeout=30)
+2026-02-13 10:58:00,658 | INFO     | Drugs: 1,300/3,230 | PGx: 5,874 | Dups skipped: 3,654 | 13.2min
+2026-02-13 10:58:17,630 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:58:31,911 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:58:32,422 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:58:45,032 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:58:45,553 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:58:49,778 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:58:59,432 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:58:59,945 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:59:00,470 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:59:00,475 | INFO     | Drugs: 1,400/3,230 | PGx: 6,778 | Dups skipped: 4,343 | 14.2min
+2026-02-13 10:59:01,766 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:59:19,251 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:59:26,341 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:59:45,368 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 10:59:55,927 | INFO     | Drugs: 1,500/3,230 | PGx: 7,170 | Dups skipped: 4,584 | 15.1min
+2026-02-13 11:00:13,722 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:00:30,583 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:00:47,402 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:00:52,885 | INFO     | Drugs: 1,600/3,230 | PGx: 7,426 | Dups skipped: 4,625 | 16.1min
+2026-02-13 11:01:03,720 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:16,477 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:16,984 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:40,255 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:40,776 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:41,293 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:44,532 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:48,311 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:01:51,053 | INFO     | Drugs: 1,700/3,230 | PGx: 8,234 | Dups skipped: 4,819 | 17.0min
+2026-02-13 11:01:53,354 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:02:21,203 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:02:31,341 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:02:33,350 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:02:33,953 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:02:47,070 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:02:47,665 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:02:49,867 | INFO     | Drugs: 1,800/3,230 | PGx: 8,919 | Dups skipped: 5,385 | 18.0min
+2026-02-13 11:03:18,958 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:03:32,169 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:03:43,704 | INFO     | Drugs: 1,900/3,230 | PGx: 9,170 | Dups skipped: 5,512 | 18.9min
+2026-02-13 11:04:08,782 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:04:10,483 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:04:18,590 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:04:19,126 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:04:38,921 | INFO     | Drugs: 2,000/3,230 | PGx: 9,563 | Dups skipped: 5,646 | 19.8min
+2026-02-13 11:04:40,758 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:04:56,158 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:02,508 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:22,602 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:35,201 | INFO     | Drugs: 2,100/3,230 | PGx: 9,967 | Dups skipped: 5,890 | 20.8min
+2026-02-13 11:05:39,801 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:46,394 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:46,967 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:47,609 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:48,239 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:50,902 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:53,539 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:05:59,373 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:09,579 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:10,118 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:10,728 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:11,362 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:22,938 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:39,080 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:40,191 | INFO     | Drugs: 2,200/3,230 | PGx: 11,314 | Dups skipped: 6,478 | 21.8min
+2026-02-13 11:06:52,169 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:06:52,750 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:07:13,602 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:07:22,028 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:07:35,784 | INFO     | Drugs: 2,300/3,230 | PGx: 11,720 | Dups skipped: 6,693 | 22.8min
+2026-02-13 11:08:20,602 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:08:29,848 | INFO     | Drugs: 2,400/3,230 | PGx: 11,817 | Dups skipped: 6,859 | 23.7min
+2026-02-13 11:08:38,808 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:08:52,144 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:09:13,997 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:09:25,893 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:09:26,476 | INFO     | Drugs: 2,500/3,230 | PGx: 12,216 | Dups skipped: 7,043 | 24.6min
+2026-02-13 11:09:49,619 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:09:54,280 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:10:22,446 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:10:22,450 | INFO     | Drugs: 2,600/3,230 | PGx: 12,503 | Dups skipped: 7,136 | 25.5min
+2026-02-13 11:10:37,693 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:10:38,184 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:11:15,201 | INFO     | Drugs: 2,700/3,230 | PGx: 12,799 | Dups skipped: 7,274 | 26.4min
+2026-02-13 11:11:19,869 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:11:49,647 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:12:08,750 | INFO     | Drugs: 2,800/3,230 | PGx: 12,947 | Dups skipped: 7,414 | 27.3min
+2026-02-13 11:12:35,207 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:12:37,454 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:12:53,888 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:12:54,479 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:12:54,994 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:12:55,493 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:13:05,434 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:13:09,294 | INFO     | Drugs: 2,900/3,230 | PGx: 13,633 | Dups skipped: 7,602 | 28.3min
+2026-02-13 11:13:33,376 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:14:01,513 | INFO     | Drugs: 3,000/3,230 | PGx: 13,749 | Dups skipped: 7,641 | 29.2min
+2026-02-13 11:14:07,320 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:14:12,836 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:14:34,135 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:14:59,126 | INFO     | Drugs: 3,100/3,230 | PGx: 14,019 | Dups skipped: 8,026 | 30.2min
+2026-02-13 11:15:31,103 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:15:41,245 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:15:41,802 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:15:43,205 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:15:53,702 | INFO     | Drugs: 3,200/3,230 | PGx: 14,428 | Dups skipped: 8,558 | 31.1min
+2026-02-13 11:15:59,417 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:10,655 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:10,659 | INFO     | Phase 1 complete: 14,544 PGx entries from drugs
+2026-02-13 11:16:10,660 | INFO     | ==================================================
+2026-02-13 11:16:10,660 | INFO     | PHASE 2: Target-centric PGx (30 pharmacogenes)
+2026-02-13 11:16:10,660 | INFO     | ==================================================
+2026-02-13 11:16:12,363 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:12,894 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:12,898 | INFO     |   CYP2D6: PGx=14,758 Safety=1
+2026-02-13 11:16:13,546 | INFO     |   CYP2C19: PGx=14,811 Safety=2
+2026-02-13 11:16:14,100 | INFO     |   CYP2C9: PGx=14,826 Safety=3
+2026-02-13 11:16:15,753 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:15,756 | INFO     |   CYP3A4: PGx=14,856 Safety=4
+2026-02-13 11:16:16,367 | INFO     |   DPYD: PGx=14,862 Safety=5
+2026-02-13 11:16:16,945 | INFO     |   TPMT: PGx=14,862 Safety=6
+2026-02-13 11:16:17,545 | INFO     |   UGT1A1: PGx=14,902 Safety=7
+2026-02-13 11:16:19,530 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:19,533 | INFO     |   VKORC1: PGx=14,944 Safety=8
+2026-02-13 11:16:20,073 | INFO     |   ADH7: PGx=14,947 Safety=9
+2026-02-13 11:16:20,629 | INFO     |   HLA-A: PGx=14,947 Safety=9
+2026-02-13 11:16:21,202 | INFO     |   HLA-B: PGx=15,014 Safety=10
+2026-02-13 11:16:21,748 | INFO     |   MRPS36: PGx=15,014 Safety=10
+2026-02-13 11:16:22,309 | INFO     |   ABCC3: PGx=15,014 Safety=11
+2026-02-13 11:16:24,482 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:25,468 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:25,477 | INFO     |   ABCB1: PGx=15,195 Safety=12
+2026-02-13 11:16:26,033 | INFO     |   NUDT15: PGx=15,195 Safety=12
+2026-02-13 11:16:26,590 | INFO     |   IFNL4: PGx=15,225 Safety=13
+2026-02-13 11:16:27,144 | INFO     |   TGFA: PGx=15,225 Safety=14
+2026-02-13 11:16:29,033 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:29,035 | INFO     |   ERBB2: PGx=15,228 Safety=16
+2026-02-13 11:16:29,593 | INFO     |   ESR1: PGx=15,234 Safety=32
+2026-02-13 11:16:30,156 | INFO     |   PTEN: PGx=15,237 Safety=33
+2026-02-13 11:16:30,723 | INFO     |   BRCA1: PGx=15,237 Safety=33
+2026-02-13 11:16:31,284 | INFO     |   BRCA2: PGx=15,237 Safety=33
+2026-02-13 11:16:31,846 | INFO     |   BRAF: PGx=15,237 Safety=34
+2026-02-13 11:16:32,404 | INFO     |   KRAS: PGx=15,237 Safety=34
+2026-02-13 11:16:32,947 | INFO     |   PBX4: PGx=15,237 Safety=34
+2026-02-13 11:16:32,968 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:33,502 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:34,009 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:34,502 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:34,509 | INFO     |   RYR1: PGx=15,663 Safety=35
+2026-02-13 11:16:35,049 | INFO     |   MPL: PGx=15,663 Safety=35
+2026-02-13 11:16:35,587 | INFO     |   TYK2: PGx=15,663 Safety=35
+2026-02-13 11:16:36,138 | INFO     |   JAK1: PGx=15,663 Safety=35
+2026-02-13 11:16:36,679 | INFO     |   JAK2: PGx=15,663 Safety=37
+2026-02-13 11:16:37,511 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points?wait=true "HTTP/1.1 200 OK"
+2026-02-13 11:16:37,606 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_pharmacogenomics/points/count "HTTP/1.1 200 OK"
+2026-02-13 11:16:37,607 | INFO     | ==================================================
+2026-02-13 11:16:37,607 | INFO     | DONE | PGx: 15,663 | Safety: 37 | Dups: 12,977 | Collection: 15,700 | 31.8min
+2026-02-13 11:16:37,607 | INFO     | ==================================================

@@ -1,0 +1,8 @@
+2026-01-30 02:49:06,011 | INFO     | Initializing Drug Enrichment Ingester...
+2026-01-30 02:49:06,676 | INFO     | HTTP Request: GET https://vector.f420.ai "HTTP/1.1 401 Unauthorized"
+2026-01-30 02:49:06,693 | INFO     | Connected to Qdrant at https://vector.f420.ai
+2026-01-30 02:49:06,955 | INFO     | Loading embedding model on cuda...
+2026-01-30 02:49:06,956 | INFO     | Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-01-30 02:49:16,052 | INFO     | Starting enriched drug ingestion at 2026-01-30 02:49:16.052500
+2026-01-30 02:49:16,053 | INFO     | Limits: 8,000 drugs, 15,000 associations
+2026-01-30 02:49:16,348 | INFO     | HTTP Request: GET https://vector.f420.ai/collections "HTTP/1.1 401 Unauthorized"

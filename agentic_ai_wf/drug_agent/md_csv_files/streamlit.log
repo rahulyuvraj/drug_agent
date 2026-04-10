@@ -1,0 +1,9 @@
+nohup: ignoring input
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://0.0.0.0:8501
+
+/home/wrahul/projects/agenticaib/agentic_ai_wf/drug_discovery_agent/app_multi.py:68: UserWarning: Failed to obtain server version. Unable to check client-server compatibility. Set check_compatibility=False to skip version check.
+  client = QdrantClient(
+  Stopping...

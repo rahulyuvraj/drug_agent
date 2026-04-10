@@ -1,0 +1,31 @@
+2026-01-30 02:01:04,699 | INFO     | ============================================================
+2026-01-30 02:01:04,699 | INFO     |   OPEN TARGETS ROBUST INGESTION
+2026-01-30 02:01:04,699 | INFO     | ============================================================
+2026-01-30 02:01:04,699 | INFO     |   Target Limit: 500
+2026-01-30 02:01:04,699 | INFO     |   Disease Limit: 200
+2026-01-30 02:01:04,699 | INFO     |   Drug Limit: 200
+2026-01-30 02:01:04,700 | INFO     |   Assoc/Disease: 10
+2026-01-30 02:01:04,700 | INFO     | ============================================================
+2026-01-30 02:01:05,308 | INFO     | HTTP Request: GET https://vector.f420.ai "HTTP/1.1 401 Unauthorized"
+/home/wrahul/projects/agenticaib/agentic_ai_wf/drug_discovery_agent/opentargets/ingest_robust.py:72: UserWarning: Failed to obtain server version. Unable to check client-server compatibility. Set check_compatibility=False to skip version check.
+  client = QdrantClient(url=url, port=443, timeout=120, prefer_grpc=False, https=True)
+2026-01-30 02:01:05,367 | INFO     | Loading PubMedBERT embedder...
+2026-01-30 02:01:17,047 | INFO     | Use pytorch device_name: cuda:0
+2026-01-30 02:01:17,048 | INFO     | Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-01-30 02:01:19,160 | INFO     | Embedder loaded (CUDA)
+2026-01-30 02:01:19,517 | INFO     | HTTP Request: GET https://vector.f420.ai/collections "HTTP/1.1 200 OK"
+2026-01-30 02:01:19,520 | INFO     | Deleting collection: OpenTargets_data
+2026-01-30 02:01:19,616 | INFO     | HTTP Request: DELETE https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 02:01:19,619 | INFO     | Creating collection: OpenTargets_data
+2026-01-30 02:01:19,834 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 02:01:19,928 | INFO     | HTTP Request: GET https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 02:01:19,933 | INFO     | Collection 'OpenTargets_data': 0 points
+2026-01-30 02:01:19,933 | INFO     | 
+Starting fetch and ingestion...
+
+2026-01-30 02:01:19,933 | INFO     | ==================================================
+2026-01-30 02:01:19,933 | INFO     | FETCHING TARGETS
+2026-01-30 02:01:19,933 | INFO     | ==================================================
+2026-01-30 02:01:19,933 | INFO     | Fetching up to 500 targets...
+2026-01-30 02:01:25,337 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:01:25,618 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"

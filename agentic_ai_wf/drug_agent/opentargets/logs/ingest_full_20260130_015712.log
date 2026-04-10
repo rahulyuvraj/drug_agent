@@ -1,0 +1,37 @@
+2026-01-30 01:57:14,993 | INFO     | ======================================================================
+2026-01-30 01:57:14,995 | INFO     |   OPEN TARGETS FULL DATA INGESTION
+2026-01-30 01:57:14,995 | INFO     | ======================================================================
+2026-01-30 01:57:14,995 | INFO     |   Collection: OpenTargets_data
+2026-01-30 01:57:14,995 | INFO     |   Target Limit: 2,000
+2026-01-30 01:57:14,995 | INFO     |   Disease Limit: 1,000
+2026-01-30 01:57:14,995 | INFO     |   Drug Limit: 1,000
+2026-01-30 01:57:14,995 | INFO     |   Associations/Disease: 20
+2026-01-30 01:57:14,995 | INFO     |   Batch Size: 100
+2026-01-30 01:57:14,995 | INFO     | ======================================================================
+2026-01-30 01:57:15,614 | INFO     | HTTP Request: GET https://vector.f420.ai "HTTP/1.1 401 Unauthorized"
+2026-01-30 01:57:15,666 | INFO     | Loading PubMedBERT embedder...
+2026-01-30 01:57:23,756 | INFO     | Use pytorch device_name: cuda:0
+2026-01-30 01:57:23,756 | INFO     | Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-01-30 01:57:25,545 | INFO     | Embedder loaded (CUDA)
+2026-01-30 01:57:25,903 | INFO     | HTTP Request: GET https://vector.f420.ai/collections "HTTP/1.1 200 OK"
+2026-01-30 01:57:25,905 | INFO     | Deleting existing collection: OpenTargets_data
+2026-01-30 01:57:25,997 | INFO     | HTTP Request: DELETE https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:57:25,999 | INFO     | Creating collection: OpenTargets_data
+2026-01-30 01:57:26,210 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:57:26,211 | INFO     | Collection 'OpenTargets_data' created
+2026-01-30 01:57:26,301 | INFO     | HTTP Request: GET https://vector.f420.ai/collections/OpenTargets_data "HTTP/1.1 200 OK"
+2026-01-30 01:57:26,305 | INFO     | Starting point ID: 0
+2026-01-30 01:57:26,305 | INFO     | 
+Starting data fetch and ingestion...
+
+2026-01-30 01:57:26,305 | INFO     | ============================================================
+2026-01-30 01:57:26,305 | INFO     | FETCHING TARGETS
+2026-01-30 01:57:26,305 | INFO     | ============================================================
+2026-01-30 01:57:26,306 | INFO     | Fetching up to 2,000 targets...
+2026-01-30 01:57:56,599 | WARNING  | Attempt 1 failed: 502 Server Error: Bad Gateway for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 01:58:27,685 | WARNING  | Attempt 2 failed: 502 Server Error: Bad Gateway for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 01:58:46,339 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:58:46,884 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:58:47,789 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:58:48,709 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 01:58:49,639 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_data/points?wait=true "HTTP/1.1 200 OK"

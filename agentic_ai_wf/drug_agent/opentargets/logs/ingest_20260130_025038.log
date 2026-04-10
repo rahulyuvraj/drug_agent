@@ -1,0 +1,374 @@
+2026-01-30 02:50:38,875 | INFO     | Initializing Drug Enrichment Ingester...
+2026-01-30 02:50:39,466 | INFO     | HTTP Request: GET https://vector.f420.ai "HTTP/1.1 401 Unauthorized"
+2026-01-30 02:50:39,522 | INFO     | Connected to Qdrant at https://vector.f420.ai
+2026-01-30 02:50:39,867 | INFO     | Loading embedding model on cuda...
+2026-01-30 02:50:39,868 | INFO     | Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-01-30 02:50:45,450 | INFO     | Starting enriched drug ingestion at 2026-01-30 02:50:45.450430
+2026-01-30 02:50:45,450 | INFO     | Limits: 8,000 drugs, 15,000 associations
+2026-01-30 02:50:45,773 | INFO     | HTTP Request: GET https://vector.f420.ai/collections "HTTP/1.1 200 OK"
+2026-01-30 02:50:45,776 | INFO     | Creating collection: OpenTargets_drugs_enriched
+2026-01-30 02:50:45,998 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched "HTTP/1.1 200 OK"
+2026-01-30 02:50:46,267 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/index?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:50:46,530 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/index?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:50:46,785 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/index?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:50:47,044 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/index?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:50:47,318 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/index?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:50:47,319 | INFO     | ==================================================
+2026-01-30 02:50:47,319 | INFO     | FETCHING ENRICHED DRUGS
+2026-01-30 02:50:47,319 | INFO     | ==================================================
+2026-01-30 02:50:47,319 | INFO     | Fetching up to 8,000 drug IDs...
+2026-01-30 02:51:42,658 | INFO     | Found 3,284 unique drug IDs
+2026-01-30 02:51:42,659 | INFO     | Fetching detailed data for 3,284 drugs...
+2026-01-30 02:51:42,660 | INFO     |   Processing drug 1/3284 (0 fetched, 0 failed)
+2026-01-30 02:52:03,658 | WARNING  | Failed to fetch details for CHEMBL4650294: 'NoneType' object has no attribute 'get'
+2026-01-30 02:52:25,326 | INFO     |   Processing drug 101/3284 (99 fetched, 1 failed)
+2026-01-30 02:52:27,293 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:52:27,296 | INFO     | Progress: Dr:100 | Assoc:0 | Total:100 | Rate:1.0/sec
+2026-01-30 02:53:09,806 | INFO     |   Processing drug 201/3284 (199 fetched, 1 failed)
+2026-01-30 02:53:11,702 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:53:11,705 | INFO     | Progress: Dr:200 | Assoc:0 | Total:200 | Rate:1.4/sec
+2026-01-30 02:53:54,301 | INFO     |   Processing drug 301/3284 (299 fetched, 1 failed)
+2026-01-30 02:53:56,147 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:53:56,150 | INFO     | Progress: Dr:300 | Assoc:0 | Total:300 | Rate:1.6/sec
+2026-01-30 02:54:37,247 | INFO     |   Processing drug 401/3284 (399 fetched, 1 failed)
+2026-01-30 02:54:39,253 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:54:39,257 | INFO     | Progress: Dr:400 | Assoc:0 | Total:400 | Rate:1.7/sec
+2026-01-30 02:55:21,824 | INFO     |   Processing drug 501/3284 (499 fetched, 1 failed)
+2026-01-30 02:55:23,965 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:55:23,967 | INFO     | Progress: Dr:500 | Assoc:0 | Total:500 | Rate:1.8/sec
+2026-01-30 02:55:55,926 | WARNING  | Failed to fetch details for CHEMBL3545092: 'NoneType' object has no attribute 'get'
+2026-01-30 02:56:05,184 | INFO     |   Processing drug 601/3284 (598 fetched, 2 failed)
+2026-01-30 02:56:07,530 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:56:07,532 | INFO     | Progress: Dr:600 | Assoc:0 | Total:600 | Rate:1.9/sec
+2026-01-30 02:56:49,852 | INFO     |   Processing drug 701/3284 (698 fetched, 2 failed)
+2026-01-30 02:56:52,233 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:56:52,236 | INFO     | Progress: Dr:700 | Assoc:0 | Total:700 | Rate:1.9/sec
+2026-01-30 02:57:34,484 | INFO     |   Processing drug 801/3284 (798 fetched, 2 failed)
+2026-01-30 02:57:35,479 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:57:35,481 | INFO     | Progress: Dr:800 | Assoc:0 | Total:800 | Rate:2.0/sec
+2026-01-30 02:58:17,567 | INFO     |   Processing drug 901/3284 (898 fetched, 2 failed)
+2026-01-30 02:58:20,018 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:58:20,020 | INFO     | Progress: Dr:900 | Assoc:0 | Total:900 | Rate:2.0/sec
+2026-01-30 02:59:02,054 | INFO     |   Processing drug 1001/3284 (998 fetched, 2 failed)
+2026-01-30 02:59:04,408 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:59:04,411 | INFO     | Progress: Dr:1,000 | Assoc:0 | Total:1,000 | Rate:2.0/sec
+2026-01-30 02:59:45,500 | INFO     |   Processing drug 1101/3284 (1098 fetched, 2 failed)
+2026-01-30 02:59:47,919 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 02:59:47,922 | INFO     | Progress: Dr:1,100 | Assoc:0 | Total:1,100 | Rate:2.0/sec
+2026-01-30 03:00:30,031 | INFO     |   Processing drug 1201/3284 (1198 fetched, 2 failed)
+2026-01-30 03:00:33,839 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:00:33,843 | INFO     | Progress: Dr:1,200 | Assoc:0 | Total:1,200 | Rate:2.0/sec
+2026-01-30 03:01:15,207 | INFO     |   Processing drug 1301/3284 (1298 fetched, 2 failed)
+2026-01-30 03:01:17,710 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:01:17,712 | INFO     | Progress: Dr:1,300 | Assoc:0 | Total:1,300 | Rate:2.1/sec
+2026-01-30 03:01:59,582 | INFO     |   Processing drug 1401/3284 (1398 fetched, 2 failed)
+2026-01-30 03:02:01,854 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:02:01,857 | INFO     | Progress: Dr:1,400 | Assoc:0 | Total:1,400 | Rate:2.1/sec
+2026-01-30 03:02:44,194 | INFO     |   Processing drug 1501/3284 (1498 fetched, 2 failed)
+2026-01-30 03:02:45,906 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:02:45,909 | INFO     | Progress: Dr:1,500 | Assoc:0 | Total:1,500 | Rate:2.1/sec
+2026-01-30 03:03:27,505 | WARNING  | Failed to fetch details for CHEMBL29919: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:27,951 | WARNING  | Failed to fetch details for CHEMBL5095026: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:27,951 | INFO     |   Processing drug 1601/3284 (1596 fetched, 4 failed)
+2026-01-30 03:03:28,397 | WARNING  | Failed to fetch details for CHEMBL1200612: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:29,298 | WARNING  | Failed to fetch details for CHEMBL1255654: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:30,171 | WARNING  | Failed to fetch details for CHEMBL1769: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:30,614 | WARNING  | Failed to fetch details for CHEMBL3545091: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:31,060 | WARNING  | Failed to fetch details for CHEMBL1201242: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:31,495 | WARNING  | Failed to fetch details for CHEMBL1201486: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:31,947 | WARNING  | Failed to fetch details for CHEMBL1200805: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:32,388 | WARNING  | Failed to fetch details for CHEMBL1200586: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:32,839 | WARNING  | Failed to fetch details for CHEMBL1200773: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:33,278 | WARNING  | Failed to fetch details for CHEMBL41306: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:33,715 | WARNING  | Failed to fetch details for CHEMBL1195: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:34,155 | WARNING  | Failed to fetch details for CHEMBL1200443: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:34,597 | WARNING  | Failed to fetch details for CHEMBL1200382: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:35,478 | WARNING  | Failed to fetch details for CHEMBL2355456: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:35,921 | WARNING  | Failed to fetch details for CHEMBL1200984: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:36,357 | WARNING  | Failed to fetch details for CHEMBL492: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:36,793 | WARNING  | Failed to fetch details for CHEMBL1200597: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:37,241 | WARNING  | Failed to fetch details for CHEMBL1200874: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:37,682 | WARNING  | Failed to fetch details for CHEMBL1201217: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:39,515 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:03:39,518 | INFO     | Progress: Dr:1,600 | Assoc:0 | Total:1,600 | Rate:2.1/sec
+2026-01-30 03:03:39,960 | WARNING  | Failed to fetch details for CHEMBL3184437: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:40,411 | WARNING  | Failed to fetch details for CHEMBL919: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:40,858 | WARNING  | Failed to fetch details for CHEMBL1275868: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:41,293 | WARNING  | Failed to fetch details for CHEMBL3545209: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:41,736 | WARNING  | Failed to fetch details for CHEMBL3707380: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:42,184 | WARNING  | Failed to fetch details for CHEMBL2106419: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:43,525 | WARNING  | Failed to fetch details for CHEMBL3707353: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:43,966 | WARNING  | Failed to fetch details for CHEMBL539770: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:44,403 | WARNING  | Failed to fetch details for CHEMBL1534525: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:44,843 | WARNING  | Failed to fetch details for CHEMBL1200334: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:45,285 | WARNING  | Failed to fetch details for CHEMBL1200478: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:45,730 | WARNING  | Failed to fetch details for CHEMBL1200464: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:46,170 | WARNING  | Failed to fetch details for CHEMBL1197: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:45,256 | WARNING  | Failed to fetch details for CHEMBL29741: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:45,697 | WARNING  | Failed to fetch details for CHEMBL1200341: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:46,575 | WARNING  | Failed to fetch details for CHEMBL2106155: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:47,019 | WARNING  | Failed to fetch details for CHEMBL1200715: 'NoneType' object has no attribute 'get'
+2026-01-30 03:03:47,461 | WARNING  | Failed to fetch details for CHEMBL1200819: 'NoneType' object has no attribute 'get'
+2026-01-30 03:04:12,282 | INFO     |   Processing drug 1701/3284 (1659 fetched, 41 failed)
+2026-01-30 03:04:30,483 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:04:30,486 | INFO     | Progress: Dr:1,700 | Assoc:0 | Total:1,700 | Rate:2.1/sec
+2026-01-30 03:04:40,614 | WARNING  | Failed to fetch details for CHEMBL1743077: 'NoneType' object has no attribute 'get'
+2026-01-30 03:04:55,100 | INFO     |   Processing drug 1801/3284 (1758 fetched, 42 failed)
+2026-01-30 03:05:15,305 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:05:15,308 | INFO     | Progress: Dr:1,800 | Assoc:0 | Total:1,800 | Rate:2.1/sec
+2026-01-30 03:05:39,496 | INFO     |   Processing drug 1901/3284 (1858 fetched, 42 failed)
+2026-01-30 03:05:55,826 | WARNING  | Failed to fetch details for CHEMBL2108817: 'NoneType' object has no attribute 'get'
+2026-01-30 03:05:57,146 | WARNING  | Failed to fetch details for CHEMBL2108713: 'NoneType' object has no attribute 'get'
+2026-01-30 03:05:59,047 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:05:59,051 | INFO     | Progress: Dr:1,900 | Assoc:0 | Total:1,900 | Rate:2.1/sec
+2026-01-30 03:06:10,973 | WARNING  | Failed to fetch details for CHEMBL1743065: 'NoneType' object has no attribute 'get'
+2026-01-30 03:06:14,952 | WARNING  | Failed to fetch details for CHEMBL3544923: 'NoneType' object has no attribute 'get'
+2026-01-30 03:06:22,465 | INFO     |   Processing drug 2001/3284 (1954 fetched, 46 failed)
+2026-01-30 03:06:34,395 | WARNING  | Failed to fetch details for CHEMBL325041: 'NoneType' object has no attribute 'get'
+2026-01-30 03:06:44,778 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:06:44,782 | INFO     | Progress: Dr:2,000 | Assoc:0 | Total:2,000 | Rate:2.1/sec
+2026-01-30 03:07:07,280 | INFO     |   Processing drug 2101/3284 (2053 fetched, 47 failed)
+2026-01-30 03:07:28,737 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:07:28,746 | INFO     | Progress: Dr:2,100 | Assoc:0 | Total:2,100 | Rate:2.1/sec
+2026-01-30 03:07:52,197 | INFO     |   Processing drug 2201/3284 (2153 fetched, 47 failed)
+2026-01-30 03:08:13,311 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:08:13,314 | INFO     | Progress: Dr:2,200 | Assoc:0 | Total:2,200 | Rate:2.1/sec
+2026-01-30 03:08:35,565 | INFO     |   Processing drug 2301/3284 (2253 fetched, 47 failed)
+2026-01-30 03:08:56,535 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:08:56,538 | INFO     | Progress: Dr:2,300 | Assoc:0 | Total:2,300 | Rate:2.1/sec
+2026-01-30 03:09:20,153 | INFO     |   Processing drug 2401/3284 (2353 fetched, 47 failed)
+2026-01-30 03:09:41,759 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:09:41,762 | INFO     | Progress: Dr:2,400 | Assoc:0 | Total:2,400 | Rate:2.1/sec
+2026-01-30 03:10:03,992 | INFO     |   Processing drug 2501/3284 (2453 fetched, 47 failed)
+2026-01-30 03:10:26,553 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:10:26,556 | INFO     | Progress: Dr:2,500 | Assoc:0 | Total:2,500 | Rate:2.1/sec
+2026-01-30 03:10:48,553 | INFO     |   Processing drug 2601/3284 (2553 fetched, 47 failed)
+2026-01-30 03:11:05,299 | WARNING  | Failed to fetch details for CHEMBL1201187: 'NoneType' object has no attribute 'get'
+2026-01-30 03:11:09,916 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:11:09,919 | INFO     | Progress: Dr:2,600 | Assoc:0 | Total:2,600 | Rate:2.1/sec
+2026-01-30 03:11:25,911 | WARNING  | Failed to fetch details for CHEMBL1201294: 'NoneType' object has no attribute 'get'
+2026-01-30 03:11:31,645 | INFO     |   Processing drug 2701/3284 (2651 fetched, 49 failed)
+2026-01-30 03:11:54,968 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:11:54,971 | INFO     | Progress: Dr:2,700 | Assoc:0 | Total:2,700 | Rate:2.1/sec
+2026-01-30 03:12:45,960 | INFO     |   Processing drug 2801/3284 (2751 fetched, 49 failed)
+2026-01-30 03:13:16,047 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:13:16,052 | INFO     | Progress: Dr:2,800 | Assoc:0 | Total:2,800 | Rate:2.1/sec
+2026-01-30 03:13:37,230 | INFO     |   Processing drug 2901/3284 (2851 fetched, 49 failed)
+2026-01-30 03:13:37,664 | WARNING  | Failed to fetch details for CHEMBL3544998: 'NoneType' object has no attribute 'get'
+2026-01-30 03:14:00,796 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:14:00,800 | INFO     | Progress: Dr:2,900 | Assoc:0 | Total:2,900 | Rate:2.1/sec
+2026-01-30 03:14:20,007 | WARNING  | Failed to fetch details for CHEMBL3544944: 'NoneType' object has no attribute 'get'
+2026-01-30 03:14:21,320 | INFO     |   Processing drug 3001/3284 (2949 fetched, 51 failed)
+2026-01-30 03:14:43,816 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:14:43,819 | INFO     | Progress: Dr:3,000 | Assoc:0 | Total:3,000 | Rate:2.1/sec
+2026-01-30 03:15:04,378 | INFO     |   Processing drug 3101/3284 (3049 fetched, 51 failed)
+2026-01-30 03:15:09,765 | WARNING  | Failed to fetch details for CHEMBL1213583: 'NoneType' object has no attribute 'get'
+2026-01-30 03:15:28,932 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:15:28,935 | INFO     | Progress: Dr:3,100 | Assoc:0 | Total:3,100 | Rate:2.1/sec
+2026-01-30 03:15:49,220 | INFO     |   Processing drug 3201/3284 (3148 fetched, 52 failed)
+2026-01-30 03:16:12,882 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:16:12,884 | INFO     | Progress: Dr:3,200 | Assoc:0 | Total:3,200 | Rate:2.1/sec
+2026-01-30 03:16:23,297 | WARNING  | Failed to fetch details for CHEMBL1236670: 'NoneType' object has no attribute 'get'
+2026-01-30 03:16:27,342 | WARNING  | Failed to fetch details for CHEMBL2104423: 'NoneType' object has no attribute 'get'
+2026-01-30 03:16:27,343 | INFO     | Completed: 3230 drugs fetched, 54 failed
+2026-01-30 03:16:27,346 | INFO     | Total enriched drugs: 3,230
+2026-01-30 03:16:27,346 | INFO     | ==================================================
+2026-01-30 03:16:27,347 | INFO     | FETCHING DRUG-DISEASE ASSOCIATIONS
+2026-01-30 03:16:27,347 | INFO     | ==================================================
+2026-01-30 03:16:27,348 | INFO     | Fetching drug-disease associations...
+2026-01-30 03:16:28,669 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:29,111 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:29,553 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:29,991 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:30,433 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:30,882 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:31,322 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:31,764 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:32,207 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:32,646 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:33,986 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:34,428 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:34,875 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:35,309 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:35,765 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:36,203 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:36,650 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:37,091 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:37,529 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:37,970 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:37,907 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:38,352 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:38,791 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:39,231 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:39,686 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:40,123 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:40,569 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:41,009 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:41,442 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:41,890 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:43,242 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:43,680 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:44,135 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:44,586 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:45,035 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:45,481 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:45,929 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:46,380 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:46,830 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:47,273 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:48,592 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:49,036 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:49,478 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:49,924 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:50,373 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:50,815 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:51,256 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:51,698 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:52,152 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:52,598 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:53,933 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:54,377 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:54,814 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:55,254 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:55,688 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:56,127 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:56,562 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:57,015 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:57,466 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:57,912 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:59,285 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:16:59,736 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:00,188 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:00,635 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:01,080 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:01,515 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:01,961 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:02,403 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:02,853 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:03,288 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:04,613 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:05,052 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:05,503 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:05,942 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:06,381 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:06,825 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:07,273 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:07,724 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:08,163 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:08,611 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:08,462 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:08,919 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:09,357 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:09,789 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:10,236 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:10,675 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:11,127 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:11,572 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:12,025 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:12,474 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:13,762 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:14,202 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:14,650 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:15,083 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:15,531 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:15,987 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:16,427 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:16,878 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:17,326 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:17,775 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:19,097 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:19,549 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:19,993 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:20,444 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:20,890 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:21,334 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:21,772 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:22,214 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:22,661 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:23,101 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:24,512 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:24,945 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:25,386 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:25,827 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:26,267 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:26,719 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:27,162 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:27,601 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:28,050 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:28,493 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:29,740 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:30,171 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:30,615 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:31,062 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:31,503 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:31,945 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:32,390 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:32,824 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:33,271 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:33,714 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:34,664 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:35,103 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:35,551 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:35,990 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:36,435 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:36,875 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:37,319 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:37,763 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:38,204 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:39,575 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:38,621 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:39,060 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:39,502 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:39,942 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:40,383 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:40,835 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:41,280 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:41,720 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:42,163 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:43,523 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:43,963 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:44,393 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:44,844 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:45,284 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:45,729 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:46,171 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:46,613 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:47,056 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:47,491 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:48,622 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:49,082 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:49,519 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:49,966 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:50,405 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:50,862 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:51,316 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:51,770 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:52,236 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:52,684 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:54,184 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:54,631 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:55,079 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:55,528 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:55,971 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:56,422 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:56,869 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:57,308 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:57,747 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:58,195 | ERROR    | HTTP error: 400 Client Error: Bad Request for url: https://api.platform.opentargets.org/api/v4/graphql
+2026-01-30 03:17:58,195 | INFO     | Fetched 0 drug-disease associations
+2026-01-30 03:17:58,197 | INFO     | Total drug-disease associations: 0
+2026-01-30 03:17:58,197 | INFO     | ==================================================
+2026-01-30 03:17:58,197 | INFO     | GRAND TOTAL: 3,230
+2026-01-30 03:17:58,198 | INFO     | ==================================================
+2026-01-30 03:17:59,273 | INFO     | HTTP Request: PUT https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points?wait=true "HTTP/1.1 200 OK"
+2026-01-30 03:17:59,277 | INFO     | ==================================================
+2026-01-30 03:17:59,277 | INFO     | INGESTION COMPLETE
+2026-01-30 03:17:59,277 | INFO     | ==================================================
+2026-01-30 03:17:59,278 | INFO     | Enriched Drugs: 3,230
+2026-01-30 03:17:59,278 | INFO     | Drug-Disease Assoc: 0
+2026-01-30 03:17:59,278 | INFO     | Total Documents: 3,230
+2026-01-30 03:17:59,278 | INFO     | Errors: 0
+2026-01-30 03:17:59,278 | INFO     | Time: 27.2 minutes
+2026-01-30 03:17:59,279 | INFO     | Rate: 2.0 docs/sec
+2026-01-30 03:17:59,382 | INFO     | HTTP Request: POST https://vector.f420.ai/collections/OpenTargets_drugs_enriched/points/count "HTTP/1.1 200 OK"
+2026-01-30 03:17:59,440 | INFO     | Collection OpenTargets_drugs_enriched now has 3,230 points
